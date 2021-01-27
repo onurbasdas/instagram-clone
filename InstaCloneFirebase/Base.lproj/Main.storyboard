@@ -11,7 +11,7 @@
         <!--Upload-->
         <scene sceneID="ZBu-ju-xUs">
             <objects>
-                <viewController id="JD2-ze-trO" sceneMemberID="viewController">
+                <viewController id="JD2-ze-trO" customClass="UploadViewController" customModule="InstaCloneFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TvH-dp-VJh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,12 +22,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beM-h2-ngL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-823" y="377"/>
+            <point key="canvasLocation" x="-826" y="421"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="oeI-vo-XU5">
+            <objects>
+                <viewController id="Low-Rm-Cbo" customClass="SettingsViewController" customModule="InstaCloneFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o6D-TE-9hm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G52-47-eMc">
+                                <rect key="frame" x="150" y="292" width="114" height="85"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="Low-Rm-Cbo" eventType="touchUpInside" id="CPG-a1-OS9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pRw-uW-05r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G52-47-eMc" firstAttribute="leading" secondItem="pRw-uW-05r" secondAttribute="leading" constant="150" id="CDd-df-9u4"/>
+                            <constraint firstItem="pRw-uW-05r" firstAttribute="bottom" secondItem="G52-47-eMc" secondAttribute="bottom" constant="436" id="KeZ-jL-QIb"/>
+                            <constraint firstItem="G52-47-eMc" firstAttribute="centerX" secondItem="o6D-TE-9hm" secondAttribute="centerX" id="rGD-Pp-2F5"/>
+                            <constraint firstItem="G52-47-eMc" firstAttribute="top" secondItem="pRw-uW-05r" secondAttribute="top" constant="248" id="y4r-Fk-AFO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="s.circle.fill" catalog="system" id="NrH-QV-lZw"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" id="9TS-Bx-xZb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSf-t1-FLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-823" y="1110"/>
         </scene>
         <!--Feed-->
         <scene sceneID="jhc-8m-ATd">
             <objects>
-                <viewController id="ZhS-gh-gA9" sceneMemberID="viewController">
+                <viewController id="ZhS-gh-gA9" customClass="FeedViewController" customModule="InstaCloneFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fLz-KM-nfL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,6 +87,7 @@
                     <connections>
                         <segue destination="ZhS-gh-gA9" kind="relationship" relationship="viewControllers" id="CFQ-j9-oRX"/>
                         <segue destination="JD2-ze-trO" kind="relationship" relationship="viewControllers" id="15b-re-zYh"/>
+                        <segue destination="Low-Rm-Cbo" kind="relationship" relationship="viewControllers" id="WVb-pC-0QS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kat-4p-aQQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -131,6 +166,7 @@
                             <constraint firstItem="QdV-Zi-blf" firstAttribute="leading" secondItem="uzC-Of-bBB" secondAttribute="leading" id="zfM-IY-G3u"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dIl-5x-hcG"/>
                     <connections>
                         <outlet property="emailText" destination="QdV-Zi-blf" id="yQ8-om-8b2"/>
                         <outlet property="passwordText" destination="uzC-Of-bBB" id="uF5-4Z-F3v"/>
@@ -144,6 +180,7 @@
     </scenes>
     <resources>
         <image name="f.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="s.circle.fill" catalog="system" width="128" height="121"/>
         <image name="u.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
