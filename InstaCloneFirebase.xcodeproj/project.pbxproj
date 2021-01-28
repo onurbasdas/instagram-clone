@@ -10,6 +10,7 @@
 		B94FB8DD25C2040700132059 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94FB8DC25C2040700132059 /* FeedViewController.swift */; };
 		B94FB8E025C2041F00132059 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94FB8DF25C2041F00132059 /* UploadViewController.swift */; };
 		B94FB8E325C2043100132059 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94FB8E225C2043100132059 /* SettingsViewController.swift */; };
+		B971E04325C338FB00435BB7 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971E04225C338FB00435BB7 /* FeedCell.swift */; };
 		B9B1CF8025C1E93500CAD7DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B1CF7F25C1E93500CAD7DA /* AppDelegate.swift */; };
 		B9B1CF8225C1E93500CAD7DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B1CF8125C1E93500CAD7DA /* SceneDelegate.swift */; };
 		B9B1CF8425C1E93500CAD7DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B1CF8325C1E93500CAD7DA /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		B94FB8DC25C2040700132059 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B94FB8DF25C2041F00132059 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		B94FB8E225C2043100132059 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B971E04225C338FB00435BB7 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		B9B1CF7C25C1E93500CAD7DA /* InstaCloneFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaCloneFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B1CF7F25C1E93500CAD7DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9B1CF8125C1E93500CAD7DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				B94FB8DC25C2040700132059 /* FeedViewController.swift */,
 				B94FB8DF25C2041F00132059 /* UploadViewController.swift */,
 				B94FB8E225C2043100132059 /* SettingsViewController.swift */,
+				B971E04225C338FB00435BB7 /* FeedCell.swift */,
 				B9B1CF8525C1E93500CAD7DA /* Main.storyboard */,
 				B9B1CF8825C1E93700CAD7DA /* Assets.xcassets */,
 				B9B1CF8A25C1E93700CAD7DA /* LaunchScreen.storyboard */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B971E04325C338FB00435BB7 /* FeedCell.swift in Sources */,
 				B9B1CF8425C1E93500CAD7DA /* ViewController.swift in Sources */,
 				B94FB8E025C2041F00132059 /* UploadViewController.swift in Sources */,
 				B9B1CF8025C1E93500CAD7DA /* AppDelegate.swift in Sources */,
