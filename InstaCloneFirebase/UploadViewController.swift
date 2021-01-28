@@ -34,21 +34,35 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.dismiss(animated: true, completion: nil)
     }
     
+    func makeAlert(titleInput:String, messageInput:String){
+        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: titleInput, style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func actionButtonClicked(_ sender: Any) {
         let storage = Storage.storage()
         let storageReference = storage.reference()
         let mediaFolder = storageReference.child("media")
         
         if let data = imageView.image?.jpegData(compressionQuality: 0.5){
-            let imageReference = mediaFolder.child("image.jpg")
-            imageReference.putData(data, metadata: nil) { (metadata, error) in
+            let uuid = UUID().uuidString
+            
+            let imageReference = mediaFolder.child(("\(uuid).jpg"))
+            imageReference.putData(data, metadata: nil) { [self] (metadata, error) in
                 if error != nil{
-                    print(error?.localizedDescription)
+                    self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error")
                 }else{
                     imageReference.downloadURL { (url, error) in
                         if error == nil{
                             let imageUrl = url?.absoluteURL
-                            print(imageUrl)
+                            
+                            //DATABASE
+                            
+                            
+                            
                         }
                     }
                 }
